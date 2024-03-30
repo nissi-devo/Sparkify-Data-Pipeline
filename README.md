@@ -24,9 +24,12 @@ dags/project/sparkify_dag.py: Configuration file for the DAG to be executed in A
 <br>
 plugins/operators:
 stage_redshift.py: Operator for reading files from S3 and loading them into Redshift staging tables
+<br>
 load_fact.py: Operator for loading the fact table into Redshift
 load_dimension.py: Operator for reading from staging tables and loading dimension tables into Redshift
+<br>
 data_quality.py: Operator for performing data quality checks
+<br>
 plugins/helpers/sql_statement.py: Redshift statements utilized in the DAG
 <br>
 <br>

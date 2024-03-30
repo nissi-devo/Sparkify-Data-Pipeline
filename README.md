@@ -21,11 +21,14 @@ Prior to executing the DAG workflow, it is necessary to create the tables in Red
 The project structure is organized as follows:
 
 dags/project/sparkify_dag.py: Configuration file for the DAG to be executed in Airflow
+<br>
 plugins/operators:
 stage_redshift.py: Operator for reading files from S3 and loading them into Redshift staging tables
 load_fact.py: Operator for loading the fact table into Redshift
 load_dimension.py: Operator for reading from staging tables and loading dimension tables into Redshift
 data_quality.py: Operator for performing data quality checks
 plugins/helpers/sql_statement.py: Redshift statements utilized in the DAG
+<br>
+<br>
 Data quality checks are conducted to verify the successful loading of tables. If any table contains zero rows, the workflow will fail and an error message will be raised.
 
